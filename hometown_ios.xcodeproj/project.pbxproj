@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A05265328B1E66000F03C4A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A05265228B1E66000F03C4A /* LoginView.swift */; };
 		5AC4EF9F28AE207B003745C1 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4EF9E28AE207B003745C1 /* Tests_iOS.swift */; };
 		5AC4EFA128AE207B003745C1 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4EFA028AE207B003745C1 /* Tests_iOSLaunchTests.swift */; };
 		5AC4EFAB28AE207B003745C1 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4EFAA28AE207B003745C1 /* Tests_macOS.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A05265228B1E66000F03C4A /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		5AC4EF8628AE2076003745C1 /* hometown_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hometown_iosApp.swift; sourceTree = "<group>"; };
 		5AC4EF8728AE2076003745C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5AC4EF8828AE207B003745C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +85,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A05264F28B1E43000F03C4A /* login */ = {
+			isa = PBXGroup;
+			children = (
+				5A05265228B1E66000F03C4A /* LoginView.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
+		5A05265028B1E43800F03C4A /* signUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = signUp;
+			sourceTree = "<group>";
+		};
+		5A05265128B1E44200F03C4A /* findPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = findPassword;
+			sourceTree = "<group>";
+		};
 		5AC4EF8028AE2076003745C1 = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +121,9 @@
 		5AC4EF8528AE2076003745C1 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5A05265128B1E44200F03C4A /* findPassword */,
+				5A05265028B1E43800F03C4A /* signUp */,
+				5A05264F28B1E43000F03C4A /* login */,
 				5AC4EF8628AE2076003745C1 /* hometown_iosApp.swift */,
 				5AC4EF8728AE2076003745C1 /* ContentView.swift */,
 				5AC4EF8828AE207B003745C1 /* Assets.xcassets */,
@@ -300,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC4EFB028AE207B003745C1 /* ContentView.swift in Sources */,
+				5A05265328B1E66000F03C4A /* LoginView.swift in Sources */,
 				5AC4EFAE28AE207B003745C1 /* hometown_iosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
