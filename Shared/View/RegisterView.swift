@@ -19,14 +19,12 @@ struct RegisterView: View {
     @State var isEmailFieldFocused = false
     @State var isTelNumFieldFocused = false
     var body: some View {
-        let horizontal : CGFloat = 30
-        
         VStack{
             Image("cat")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
-        }.padding(.horizontal, horizontal)
+        }.padding(.horizontal, Contstants.medium)
         
         Spacer()
         
@@ -40,7 +38,7 @@ struct RegisterView: View {
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)
             
-        }.padding(.horizontal, horizontal)
+        }.padding(.horizontal, Contstants.medium)
         
         VStack{
             SecureField("비밀번호를 입력해주세요.", text: $userPassword)
@@ -48,7 +46,7 @@ struct RegisterView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)
-        }.padding(.horizontal, horizontal)
+        }.padding(.horizontal, Contstants.medium)
         
         VStack{
             TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
@@ -58,7 +56,7 @@ struct RegisterView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)
-        }.padding(.horizontal, horizontal)
+        }.padding(.horizontal, Contstants.medium)
         
         VStack{
             TextField("전화번호를 입력해주세요.", text: $userTelNum, onEditingChanged: { editingChange in isTelNumFieldFocused = editingChange
@@ -68,7 +66,7 @@ struct RegisterView: View {
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)
-        }.padding(.horizontal, horizontal)
+        }.padding(.horizontal, Contstants.medium)
         
         Spacer()
         

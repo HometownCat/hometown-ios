@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct Contstants {
+    static let medium : CGFloat  = 30
+}
