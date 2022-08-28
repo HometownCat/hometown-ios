@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    let loginView = LoginView()
+  
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            Spacer().background(Color.white).edgesIgnoringSafeArea(.all)
+            LoginView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+//        Group{
+            ContentView()
+//        }
+        
     }
 }
