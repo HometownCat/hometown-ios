@@ -9,9 +9,20 @@ import SwiftUI
 
 struct RegisterView: View {
     @Binding var registerScreen : Bool
+    @State var userId : String = ""
+    @State var isIdFieldFocused = false
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack{
+            TextField("아이디를 입력해주세요.", text: $userId, onEditingChanged: { editingChange in isIdFieldFocused = editingChange
+                
+            })
+                .font(.system(size: isIdFieldFocused ? 14 : 10))
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .cornerRadius(10)
+        }
     }
 }
-    
+
