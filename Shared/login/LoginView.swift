@@ -19,20 +19,20 @@ struct LoginView: View {
     }
     
     var body : some View {
-        HStack{
-            Image(systemName: "envelope").frame(width: iconWidth)
-            TextField("ID / E-mail Address", text: $email)
-                .frame(width: inputWidth, height: inputWidth)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
-        }
-        HStack{
-            Image(systemName: "lock").frame(width: iconWidth)
-            TextField("Password", text: $password)
-                .frame(width: inputWidth, height: inputWidth)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
-        }
+//        HStack{
+//            Image(systemName: "envelope").frame(width: iconWidth)
+//            TextField("ID / E-mail Address", text: $email)
+//                .frame(width: inputWidth, height: inputWidth)
+//                .padding()
+//                .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+//        }
+//        HStack{
+//            Image(systemName: "lock").frame(width: iconWidth)
+//            TextField("Password", text: $password)
+//                .frame(width: inputWidth, height: inputWidth)
+//                .padding()
+//                .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+//        }
         
         HStack {
             Button(action: { }){
