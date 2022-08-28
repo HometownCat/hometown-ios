@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    let loginView = LoginView()
-  
+struct MainView: View {
+    
     var body: some View {
         ZStack{
             Spacer().background(Color.white).edgesIgnoringSafeArea(.all)
@@ -18,11 +17,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-//        Group{
-            ContentView()
-//        }
-        
+        MainView()
     }
 }
