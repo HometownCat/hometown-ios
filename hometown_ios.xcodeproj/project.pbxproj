@@ -22,6 +22,7 @@
 		ACC8F15328BB3DFA0038E397 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15228BB3DFA0038E397 /* constants.swift */; };
 		ACC8F15828BB3EA20038E397 /* view_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15728BB3EA20038E397 /* view_model.swift */; };
 		ACC8F15A28BB3F970038E397 /* model.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15928BB3F970038E397 /* model.swift */; };
+		ACC8F15C28BB3FD00038E397 /* component.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15B28BB3FD00038E397 /* component.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		ACC8F15228BB3DFA0038E397 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		ACC8F15728BB3EA20038E397 /* view_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view_model.swift; sourceTree = "<group>"; };
 		ACC8F15928BB3F970038E397 /* model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = model.swift; sourceTree = "<group>"; };
+		ACC8F15B28BB3FD00038E397 /* component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = component.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				ACC8F15628BB3E6E0038E397 /* models */,
-				ACC8F15528BB3E4A0038E397 /* view_model */,
+				ACC8F15528BB3E4A0038E397 /* view_models */,
 				ACC8F15428BB3E010038E397 /* common */,
-				ACC8F14D28BB3CA80038E397 /* components */,
 				ACC8F14A28BB3C8B0038E397 /* view */,
 				5A05264F28B1E43000F03C4A /* login */,
 				5AC4EF8628AE2076003745C1 /* hometown_iosApp.swift */,
@@ -167,6 +168,7 @@
 		ACC8F14A28BB3C8B0038E397 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				ACC8F14D28BB3CA80038E397 /* components */,
 				5A05265228B1E66000F03C4A /* LoginView.swift */,
 			);
 			path = view;
@@ -182,6 +184,7 @@
 		ACC8F14D28BB3CA80038E397 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				ACC8F15B28BB3FD00038E397 /* component.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -195,12 +198,12 @@
 			path = common;
 			sourceTree = "<group>";
 		};
-		ACC8F15528BB3E4A0038E397 /* view_model */ = {
+		ACC8F15528BB3E4A0038E397 /* view_models */ = {
 			isa = PBXGroup;
 			children = (
 				ACC8F15728BB3EA20038E397 /* view_model.swift */,
 			);
-			path = view_model;
+			path = view_models;
 			sourceTree = "<group>";
 		};
 		ACC8F15628BB3E6E0038E397 /* models */ = {
@@ -375,6 +378,7 @@
 				5AC4EFAE28AE207B003745C1 /* hometown_iosApp.swift in Sources */,
 				ACC8F15328BB3DFA0038E397 /* constants.swift in Sources */,
 				ACC8F15828BB3EA20038E397 /* view_model.swift in Sources */,
+				ACC8F15C28BB3FD00038E397 /* component.swift in Sources */,
 				ACC8F15A28BB3F970038E397 /* model.swift in Sources */,
 				ACC8F15128BB3DED0038E397 /* utils.swift in Sources */,
 			);
