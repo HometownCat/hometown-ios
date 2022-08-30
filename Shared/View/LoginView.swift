@@ -107,7 +107,6 @@ struct LoginView_Previews: PreviewProvider{
     static var previews: some View{
         Group {
             LoginView()
-            LoginView()
         }
     }
 }
