@@ -16,8 +16,12 @@ struct LoginView: View {
     @State var password: String = "";
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
-    let iconWidth: CGFloat = 30
+    let iconWidth: CGFloat = 32
+    let iconHeight: CGFloat = 32
     let inputWidth: CGFloat = 30
+    
+    let textFieldWidth: CGFloat = 330
+    let textFieldHeight: CGFloat = 40
     
     init(){
         UISwitch.appearance().onTintColor
@@ -28,7 +32,7 @@ struct LoginView: View {
         
         
         NavigationView{
-            VStack{
+            VStack(alignment: .center, spacing: 10){
                 VStack {
                     Text("우리동네 킹냥이")
                         .font(.largeTitle)
@@ -42,28 +46,30 @@ struct LoginView: View {
                         .cornerRadius(45)
                         .padding(.bottom, 75)
                 }.padding(.horizontal, Contstants.medium)
+//                    .alignmentGuide(.leading, computeValue: {d in d[explicit: .leading]})
                 
                 HStack{
-                    Image(systemName: "envelope").frame(width: iconWidth)
+                    Image(systemName: "person").frame(width: iconWidth, height: iconHeight)
                     TextField("Username", text: $username)
-                        .frame(width: 300, height: 20, alignment: .trailing)
+                        .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
                         .padding(.leading, 15)
-                        .cornerRadius(70.0)
                         .background(lightGreyColor)
-                }.padding(.bottom, 7)
+                        .cornerRadius(11)
+                }.padding(.bottom, 3)
                 
                 HStack{
-                    Image(systemName: "lock").frame(width: iconWidth)
+                    Image(systemName: "lock").frame(width: iconWidth, height: iconHeight)
                     SecureField("Password", text: $password)
-                        .frame(width: 300, height: 20, alignment: .trailing)
+                        .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
                         .padding(.leading, 15)
-                        .cornerRadius(70.0)
                         .background(lightGreyColor)
-                }
-                HStack(spacing: 40){
+                        .cornerRadius(11)
+                }.padding(.bottom, 27)
+                
+                HStack(alignment: .center, spacing: 48){
                     Button(action: { }){
                         Text("로그인")
-                            .frame(width: 80, height: 20, alignment: .center)
+                            .frame(width: 80, height: 15, alignment: .center)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                     }
@@ -72,8 +78,8 @@ struct LoginView: View {
                         Text("자동 로그인")
                             .font(.system(size: 14))
                     }
-                    .frame(width: 145, height: 20, alignment: .trailing)
-                }.padding()
+                    .frame(width: 130, height: 20)
+                }.padding(.bottom, 28)
                 
                 
                 NavigationLink(
@@ -86,7 +92,7 @@ struct LoginView: View {
                     Text("ID/PW 찾기")
                         .font(.system(size: 14))
                 }
-            }
+            }.padding(.bottom, 80)
             
             
         }
