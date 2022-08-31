@@ -43,14 +43,6 @@ struct FindIdAndPasswordView: View{
         }.padding(.horizontal, Contstants.medium)
         
         VStack{
-            SecureField("비밀번호를 입력해주세요.", text: $userPassword)
-                .font(.system(size: isPasswordFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
-        
-        VStack{
             TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
                 
             })
@@ -71,9 +63,13 @@ struct FindIdAndPasswordView: View{
         }.padding(.horizontal, Contstants.medium)
         
         Spacer()
+        HStack{
+            Button(action: {}, label: {Text("인증하기")}).buttonStyle(.bordered)
+                .padding(.trailing, 46)
+       
         
-        VStack{
-            Button(action: {}, label: {Text("가입하기")}).buttonStyle(.bordered)
+            Button(action: {}, label: {Text("ID/PW 찾기")}).buttonStyle(.bordered)
+                .padding(.leading, 40)
         }
         
         Spacer()

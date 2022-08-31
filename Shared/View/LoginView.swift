@@ -73,26 +73,27 @@ struct LoginView: View {
                             .frame(width: 80, height: 15, alignment: .center)
                             .padding()
                             .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
-                    }
+                    }.padding(.leading, 30)
                     
                     Toggle(isOn : $isOn){
                         Text("자동 로그인")
                             .font(.system(size: 14))
                     }
                     .frame(width: 130, height: 20)
-                }.padding(.bottom, 28)
+                }.padding(.bottom, 28).padding(.trailing, 10)
                 
-                
-                NavigationLink(
-                    destination: RegisterView(registerScreen: $registerScreen)
-                ){
-                    Text("회원가입")
-                        .font(.system(size: 14))
-                }
-                
-                NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
-                    Text("ID/PW 찾기")
-                        .font(.system(size: 14))
+                HStack{
+                    NavigationLink(
+                        destination: RegisterView(registerScreen: $registerScreen)
+                    ){
+                        Text("회원가입")
+                            .font(.system(size: 14))
+                    }.padding(.leading, 20)
+                    
+                    NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
+                        Text("ID/PW 찾기")
+                            .font(.system(size: 14))
+                    }.padding(.leading, 40)
                 }
             }.padding(.bottom, 80)
             
