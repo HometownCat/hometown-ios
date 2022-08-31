@@ -1,0 +1,82 @@
+//
+//  FindIdAndPasswordView.swift
+//  hometown_ios (iOS)
+//
+//  Created by 차윤범 on 2022/08/31.
+//
+
+import Foundation
+import SwiftUI
+
+struct FindIdAndPasswordView: View{
+    @Binding var findScreen: Bool
+    @State var userId : String = ""
+    @State var userPassword : String = ""
+    @State var userEmail : String = ""
+    @State var userTelNum : String = ""
+    
+    @State var isIdFieldFocused = false
+    @State var isPasswordFieldFocused = false
+    @State var isEmailFieldFocused = false
+    @State var isTelNumFieldFocused = false
+    
+    var body: some View{
+        VStack{
+            Image("cat")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+        }.padding(.horizontal, Contstants.medium)
+        
+        Spacer()
+        
+        VStack{
+        
+            TextField("아이디를 입력해주세요.", text: $userId, onEditingChanged: { editingChange in isIdFieldFocused = editingChange
+                
+            })
+                .font(.system(size: isIdFieldFocused ? 14 : 10))
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .cornerRadius(10)
+            
+        }.padding(.horizontal, Contstants.medium)
+        
+        VStack{
+            SecureField("비밀번호를 입력해주세요.", text: $userPassword)
+                .font(.system(size: isPasswordFieldFocused ? 14 : 10))
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .cornerRadius(10)
+        }.padding(.horizontal, Contstants.medium)
+        
+        VStack{
+            TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
+                
+            })
+                .font(.system(size: isEmailFieldFocused ? 14 : 10))
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .cornerRadius(10)
+        }.padding(.horizontal, Contstants.medium)
+        
+        VStack{
+            TextField("전화번호를 입력해주세요.", text: $userTelNum, onEditingChanged: { editingChange in isTelNumFieldFocused = editingChange
+                
+            })
+                .font(.system(size: isTelNumFieldFocused ? 14 : 10))
+                .padding()
+                .background(Color(uiColor: .secondarySystemBackground))
+                .cornerRadius(10)
+        }.padding(.horizontal, Contstants.medium)
+        
+        Spacer()
+        
+        VStack{
+            Button(action: {}, label: {Text("가입하기")}).buttonStyle(.bordered)
+        }
+        
+        Spacer()
+    }
+    
+}

@@ -12,6 +12,7 @@ import UIKit
 struct LoginView: View {
     @State private var isOn = true
     @State var registerScreen = false
+    @State var findScreen = false
     @State var username: String = "";
     @State var password: String = "";
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
@@ -87,8 +88,9 @@ struct LoginView: View {
                 ){
                     Text("회원가입")
                         .font(.system(size: 14))
-                    Spacer()
-                        .frame(width: 40)
+                }
+                
+                NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
                     Text("ID/PW 찾기")
                         .font(.system(size: 14))
                 }
