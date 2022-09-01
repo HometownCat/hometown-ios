@@ -33,7 +33,7 @@ struct LoginView: View {
         
         
         NavigationView{
-            VStack(alignment: .center, spacing: 10){
+            VStack{
                 VStack {
                     Text("우리동네 킹냥이")
                         .font(.largeTitle)
@@ -72,8 +72,10 @@ struct LoginView: View {
                         Text("로그인")
                             .frame(width: 80, height: 15, alignment: .center)
                             .padding()
+                            .foregroundColor(.black)
                             .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                     }.padding(.leading, 30)
+                        .foregroundColor(.black)
                     
                     Toggle(isOn : $isOn){
                         Text("자동 로그인")
@@ -88,17 +90,26 @@ struct LoginView: View {
                     ){
                         Text("회원가입")
                             .font(.system(size: 14))
+                            .foregroundColor(.black)
                     }.padding(.leading, 20)
                     
                     NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
                         Text("ID/PW 찾기")
                             .font(.system(size: 14))
+                            .foregroundColor(.black)
                     }.padding(.leading, 40)
                 }
             }.padding(.bottom, 80)
+                .background(
+                        Image("background1")
+                            .resizable()
+                            .scaledToFill()
+                            .opacity(150)
+                )
             
             
         }
+        
         
         
     }
