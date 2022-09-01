@@ -33,86 +33,86 @@ struct LoginView: View {
         
         
         NavigationView{
-            VStack{
-                VStack {
-                    Text("우리동네 킹냥이")
-                        .font(.largeTitle)
-                        .fontWeight(.semibold)
-                        .padding(.horizontal, 20)
-                    Image("cat")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 200, height: 200)
-                        .clipped()
-                        .cornerRadius(45)
-                        .padding(.bottom, 75)
-                }.padding(.horizontal, Contstants.medium)
-//                    .alignmentGuide(.leading, computeValue: {d in d[explicit: .leading]})
-                
-                HStack{
-                    Image(systemName: "person").frame(width: iconWidth, height: iconHeight)
-                    TextField("Username", text: $username)
-                        .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
-                        .padding(.leading, 15)
-                        .background(lightGreyColor)
-                        .cornerRadius(11)
-                }.padding(.bottom, 3)
-                
-                HStack{
-                    Image(systemName: "lock").frame(width: iconWidth, height: iconHeight)
-                    SecureField("Password", text: $password)
-                        .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
-                        .padding(.leading, 15)
-                        .background(lightGreyColor)
-                        .cornerRadius(11)
-                }.padding(.bottom, 27)
-                
-                HStack(alignment: .center, spacing: 48){
-                    Button(action: { }){
-                        Text("로그인")
-                            .frame(width: 80, height: 15, alignment: .center)
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
-                    }.padding(.leading, 30)
-                        .foregroundColor(.black)
-                    
-                    Toggle(isOn : $isOn){
-                        Text("자동 로그인")
-                            .font(.system(size: 14))
-                    }
-                    .frame(width: 130, height: 20)
-                }.padding(.bottom, 28).padding(.trailing, 10)
-                
-                HStack{
-                    NavigationLink(
-                        destination: RegisterView(registerScreen: $registerScreen)
-                    ){
-                        Text("회원가입")
-                            .font(.system(size: 14))
-                            .foregroundColor(.black)
-                    }.padding(.leading, 20)
-                    
-                    NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
-                        Text("ID/PW 찾기")
-                            .font(.system(size: 14))
-                            .foregroundColor(.black)
-                    }.padding(.leading, 40)
-                }
-            }.padding(.bottom, 80)
-                .background(
-                        Image("background1")
+            ZStack{
+                Image("background1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .edgesIgnoringSafeArea(.all)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+                    .scaledToFit()
+                VStack{
+                    VStack {
+                        Text("우리동네 킹냥이")
+                            .font(.largeTitle)
+                            .fontWeight(.semibold)
+                            .padding(.horizontal, 20)
+                        Image("cat")
                             .resizable()
-                            .scaledToFill()
-                            .opacity(150)
-                )
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 200)
+                            .clipped()
+                            .cornerRadius(45)
+                            .padding(.bottom, 75)
+                    }.padding(.horizontal, Contstants.medium)
+    //                    .alignmentGuide(.leading, computeValue: {d in d[explicit: .leading]})
+                    
+                    HStack{
+                        Image(systemName: "person").frame(width: iconWidth, height: iconHeight)
+                        TextField("Username", text: $username)
+                            .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
+                            .padding(.leading, 15)
+                            .background(lightGreyColor)
+                            .cornerRadius(11)
+                    }.padding(.bottom, 3)
+                    
+                    HStack{
+                        Image(systemName: "lock").frame(width: iconWidth, height: iconHeight)
+                        SecureField("Password", text: $password)
+                            .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
+                            .padding(.leading, 15)
+                            .background(lightGreyColor)
+                            .cornerRadius(11)
+                    }.padding(.bottom, 27)
+                    
+                    HStack(alignment: .center, spacing: 48){
+                        Button(action: { }){
+                            Text("로그인")
+                                .frame(width: 80, height: 15, alignment: .center)
+                                .padding()
+                                .foregroundColor(.black)
+                                .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
+                                .background(Color.white)
+                        }.padding(.leading, 30)
+                            .foregroundColor(.black)
+                        
+                        Toggle(isOn : $isOn){
+                            Text("자동 로그인")
+                                .font(.system(size: 14))
+                        }
+                        .frame(width: 130, height: 20)
+                    }.padding(.bottom, 28).padding(.trailing, 10)
+                    
+                    HStack{
+                        NavigationLink(
+                            destination: RegisterView(registerScreen: $registerScreen)
+                        ){
+                            Text("회원가입")
+                                .font(.system(size: 14))
+                                .foregroundColor(.black)
+                        }.padding(.leading, 20)
+                        
+                        NavigationLink(destination: FindIdAndPasswordView(findScreen: $findScreen)){
+                            Text("ID/PW 찾기")
+                                .font(.system(size: 14))
+                                .foregroundColor(.black)
+                        }.padding(.leading, 40)
+                    }
+                }.padding(.bottom, 80)
             
-            
+            }
         }
         
-        
-        
-    }
+    };
 
 }
 
@@ -121,6 +121,7 @@ struct LoginView_Previews: PreviewProvider{
     static var previews: some View{
         Group {
             LoginView()
+               
         }
     }
 }
