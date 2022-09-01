@@ -37,9 +37,8 @@ struct LoginView: View {
                 Image("background1")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
+                    .frame(minWidth: 0, maxWidth: .infinity)
                     .edgesIgnoringSafeArea(.all)
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                    .scaledToFit()
                 VStack{
                     VStack {
                         Text("우리동네 킹냥이")
