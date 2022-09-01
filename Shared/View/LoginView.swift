@@ -81,8 +81,10 @@ struct LoginView: View {
                                 .foregroundColor(.black)
                                 .background(RoundedRectangle(cornerRadius: 10).strokeBorder())
                                 .background(Color.white)
+                                .cornerRadius(10)
                         }.padding(.leading, 30)
                             .foregroundColor(.black)
+                            .cornerRadius(10)
                         
                         Toggle(isOn : $isOn){
                             Text("자동 로그인")
