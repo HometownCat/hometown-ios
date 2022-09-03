@@ -19,6 +19,7 @@
 		5AC4EFB228AE207B003745C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC4EF8828AE207B003745C1 /* Assets.xcassets */; };
 		5AC4EFB328AE207B003745C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC4EF8828AE207B003745C1 /* Assets.xcassets */; };
 		5AD0163928BEE44C00549816 /* FindIdAndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0163828BEE44C00549816 /* FindIdAndPasswordView.swift */; };
+		ACC5453F28C3127100B687DF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5453E28C3127100B687DF /* FeedView.swift */; };
 		ACC8F15128BB3DED0038E397 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15028BB3DED0038E397 /* Utils.swift */; };
 		ACC8F15328BB3DFA0038E397 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15228BB3DFA0038E397 /* Constants.swift */; };
 		ACC8F15828BB3EA20038E397 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15728BB3EA20038E397 /* ViewModel.swift */; };
@@ -61,6 +62,7 @@
 		5AC4EFAA28AE207B003745C1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5AC4EFAC28AE207B003745C1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		5AD0163828BEE44C00549816 /* FindIdAndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdAndPasswordView.swift; sourceTree = "<group>"; };
+		ACC5453E28C3127100B687DF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		ACC8F15028BB3DED0038E397 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ACC8F15228BB3DFA0038E397 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		ACC8F15728BB3EA20038E397 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				5A05265228B1E66000F03C4A /* LoginView.swift */,
 				ACC8F16228BB42AD0038E397 /* RegisterView.swift */,
 				5AD0163828BEE44C00549816 /* FindIdAndPasswordView.swift */,
+				ACC5453E28C3127100B687DF /* FeedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				ACC8F15828BB3EA20038E397 /* ViewModel.swift in Sources */,
 				ACC8F15C28BB3FD00038E397 /* Component.swift in Sources */,
 				ACC8F15A28BB3F970038E397 /* Model.swift in Sources */,
+				ACC5453F28C3127100B687DF /* FeedView.swift in Sources */,
 				ACC8F15128BB3DED0038E397 /* Utils.swift in Sources */,
 				ACC8F15F28BB423E0038E397 /* Repository.swift in Sources */,
 			);

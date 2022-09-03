@@ -117,12 +117,12 @@ struct LoginView: View {
 
 }
 
-struct LoginView_Previews: PreviewProvider{
-    
-    static var previews: some View{
-        Group {
-            LoginView()
-               
-        }
-    }
-}
+//struct LoginView_Previews: PreviewProvider{
+//
+//    static var previews: some View{
+//        Group {
+//            LoginView()
+//
+//        }
+//    }
+//}
