@@ -11,14 +11,9 @@ import SwiftUI
 struct FindIdAndPasswordView: View{
     @Binding var findScreen: Bool
     @State var userId : String = ""
-    @State var userPassword : String = ""
-    @State var userEmail : String = ""
-    @State var userTelNum : String = ""
-    
-    @State var isIdFieldFocused = false
-    @State var isPasswordFieldFocused = false
-    @State var isEmailFieldFocused = false
-    @State var isTelNumFieldFocused = false
+    @State var password : String = ""
+    @State var email : String = ""
+    @State var telNum : String = ""
     
     var body: some View{
         VStack{
@@ -30,27 +25,11 @@ struct FindIdAndPasswordView: View{
         
         Spacer()
         
-        Custom_TextField(bindValue: $userId, label: "아이디를 입력해주세요.")
+        Custom_TextField(bindValue: $userId, label: "ID")
         
-        VStack{
-            TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isEmailFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
+        Custom_TextField(bindValue: $email, label: "이메일")
         
-        VStack{
-            TextField("전화번호를 입력해주세요.", text: $userTelNum, onEditingChanged: { editingChange in isTelNumFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isTelNumFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
+        Custom_TextField(bindValue: $telNum, label: "전화번호")
         
         Spacer()
         HStack{

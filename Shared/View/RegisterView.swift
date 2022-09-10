@@ -10,14 +10,11 @@ import SwiftUI
 struct RegisterView: View {
     @Binding var registerScreen : Bool
     @State var userId : String = ""
-    @State var userPassword : String = ""
-    @State var userEmail : String = ""
-    @State var userTelNum : String = ""
+    @State var password : String = ""
+    @State var passwordConfirm : String = ""
+    @State var email : String = ""
+    @State var telNum : String = ""
     
-    @State var isIdFieldFocused = false
-    @State var isPasswordFieldFocused = false
-    @State var isEmailFieldFocused = false
-    @State var isTelNumFieldFocused = false
     var body: some View {
         VStack{
             Image("cat")
@@ -28,45 +25,16 @@ struct RegisterView: View {
         
         Spacer()
         
-        VStack{
+        Custom_TextField(bindValue: $userId, label: "ID")
         
-            TextField("아이디를 입력해주세요.", text: $userId, onEditingChanged: { editingChange in isIdFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isIdFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-            
-        }.padding(.horizontal, Contstants.medium)
+        Custom_SecureField(bindValue: $password, label: "비밀번호")
         
-        VStack{
-            SecureField("비밀번호를 입력해주세요.", text: $userPassword)
-                .font(.system(size: isPasswordFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
+        Custom_SecureField(bindValue: $passwordConfirm, label: "비밀번호 확인")
         
-        VStack{
-            TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isEmailFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
         
-        VStack{
-            TextField("전화번호를 입력해주세요.", text: $userTelNum, onEditingChanged: { editingChange in isTelNumFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isTelNumFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
+        Custom_TextField(bindValue: $email, label: "이메일")
+        
+        Custom_TextField(bindValue: $telNum, label: "전화번호")
         
         Spacer()
         
