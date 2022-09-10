@@ -21,7 +21,7 @@ struct FindIdAndPasswordView: View{
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
-        }.padding(.horizontal, Contstants.medium)
+        }.padding(.horizontal, Constants.medium)
         
         Spacer()
         

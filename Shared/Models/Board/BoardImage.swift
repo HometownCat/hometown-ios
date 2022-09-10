@@ -7,20 +7,24 @@
 
 import Foundation
 
-struct BoardImage {
-    var id: Int;
-    var jpeg: String;
-    var webp: String;
-    var original: String;
-    var jpegBucket: String;
-    var webpBucket: String;
-    var originalBucket: String;
-    var width: Int;
-    var height: Int;
-    var filesizeJpeg: Int;
-    var filesizeWebp: Int;
-    var order: Int;
-    var createdAt: Date;
-    var updatedAt: Date;
-    var boardId: Int;
+struct BoardImageResults : Decodable {
+    let boardImages: [BoardImage]
+}
+
+struct BoardImage : Decodable, Hashable{
+    let id: Int;
+    let jpeg: String;
+    let webp: String;
+    let original: String;
+    let jpegBucket: String;
+    let webpBucket: String;
+    let originalBucket: String;
+    let width: Int;
+    let height: Int;
+    let filesizeJpeg: Int;
+    let filesizeWebp: Int;
+    let order: Int;
+    let createdAt: Date;
+    let updatedAt: Date;
+    let boardId: Int;
 }

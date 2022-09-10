@@ -8,6 +8,8 @@
 import Foundation
 import SwiftUI
 
-struct Contstants {
+struct Constants {
     static let medium : CGFloat  = 35
+    static let iconWidth: CGFloat = 32
+    static let iconHeight: CGFloat = 32
 }

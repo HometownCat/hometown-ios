@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct BoardComment {
-    var id: Int;
-    var comment: String;
-    var createdAt: Date;
-    var updatedAt: Date;
-    var boardId: Int;
+struct BoardCommentResults : Decodable {
+    let boardComments: [BoardComment]
+}
+
+struct BoardComment : Decodable, Hashable{
+    let id: Int;
+    let comment: String;
+    let createdAt: Date;
+    let updatedAt: Date;
+    let boardId: Int;
 }

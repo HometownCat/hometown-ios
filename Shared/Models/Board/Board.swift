@@ -7,14 +7,17 @@
 
 import Foundation
 
-struct Board {
-    var id: Int;
-    var title: String;
-    var content: String;
-    var viewCount: Int;
-    var likeCount: Int;
-    var commentCount: Int;
-    var createdAt: Date;
-    var updatedAt: Date;
-    var userId: Int;
+struct BoardResults : Decodable {
+    let boards: [Board]
+}
+struct Board : Decodable, Hashable {
+    let id: Int;
+    let title: String;
+    let content: String;
+    let viewCount: Int;
+    let likeCount: Int;
+    let commentCount: Int;
+    let createdAt: Date;
+    let updatedAt: Date;
+    let userId: Int;
 }

@@ -17,8 +17,8 @@ struct LoginView: View {
     @State var password: String = "";
     let lightGreyColor = Color(red: 239.0/255.0, green: 243.0/255.0, blue: 244.0/255.0, opacity: 1.0)
 
-    let iconWidth: CGFloat = 32
-    let iconHeight: CGFloat = 32
+//    let iconWidth: CGFloat = 32
+//    let iconHeight: CGFloat = 32
     let inputWidth: CGFloat = 30
     
     let textFieldWidth: CGFloat = 330
@@ -52,11 +52,11 @@ struct LoginView: View {
                             .clipped()
                             .cornerRadius(45)
                             .padding(.bottom, 75)
-                    }.padding(.horizontal, Contstants.medium)
+                    }.padding(.horizontal, Constants.medium)
     //                    .alignmentGuide(.leading, computeValue: {d in d[explicit: .leading]})
                     
                     HStack{
-                        Image(systemName: "person").frame(width: iconWidth, height: iconHeight)
+                        Image(systemName: "person").frame(width: Constants.iconWidth, height: Constants.iconHeight)
                         TextField("Username", text: $username)
                             .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
                             .padding(.leading, 15)
@@ -65,7 +65,7 @@ struct LoginView: View {
                     }.padding(.bottom, 3)
                     
                     HStack{
-                        Image(systemName: "lock").frame(width: iconWidth, height: iconHeight)
+                        Image(systemName: "lock").frame(width: Constants.iconWidth, height: Constants.iconHeight)
                         SecureField("Password", text: $password)
                             .frame(width: textFieldWidth, height: textFieldHeight, alignment: .leading)
                             .padding(.leading, 15)

@@ -20,7 +20,7 @@ struct Custom_SecureField : View{
             .padding()
             .background(Color(uiColor: .secondarySystemBackground))
             .cornerRadius(10)
-        }.padding(.horizontal, Contstants.medium)
+        }.padding(.horizontal, Constants.medium)
     }
 }
 

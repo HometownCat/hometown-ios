@@ -22,6 +22,6 @@ struct Custom_TextField : View{
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)
             
-        }.padding(.horizontal, Contstants.medium)
+        }.padding(.horizontal, Constants.medium)
     }
 }
