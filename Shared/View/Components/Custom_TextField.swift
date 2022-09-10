@@ -9,14 +9,15 @@ import Foundation
 import SwiftUI
 
 struct Custom_TextField : View{
-    @Binding var userId : String
-    @Binding var label : String
+    @Binding var bindValue : String
+    var label : String
 
     var body: some View{
         VStack{
-            TextField(label, text: $userId, onEditingChanged: { editingChange in
+            TextField(label, text: $bindValue, onEditingChanged: { editingChange in
                 
             })
+            .font(.system(size: 10))
                 .padding()
                 .background(Color(uiColor: .secondarySystemBackground))
                 .cornerRadius(10)

@@ -30,17 +30,7 @@ struct FindIdAndPasswordView: View{
         
         Spacer()
         
-        VStack{
-        
-            TextField("아이디를 입력해주세요.", text: $userId, onEditingChanged: { editingChange in isIdFieldFocused = editingChange
-                
-            })
-                .font(.system(size: isIdFieldFocused ? 14 : 10))
-                .padding()
-                .background(Color(uiColor: .secondarySystemBackground))
-                .cornerRadius(10)
-            
-        }.padding(.horizontal, Contstants.medium)
+        Custom_TextField(bindValue: $userId, label: "아이디를 입력해주세요.")
         
         VStack{
             TextField("이메일을 입력해주세요.", text: $userEmail, onEditingChanged: { editingChange in isEmailFieldFocused = editingChange
