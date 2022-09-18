@@ -23,9 +23,10 @@ struct MainFeed: View {
             }
             
             Spacer()
-            Text("Main Screen")
-            Text("Main Screen")
+            Feed()
+            Feed()
         }
 //                      .navigationBarHidden(true)
     }
 }
+
