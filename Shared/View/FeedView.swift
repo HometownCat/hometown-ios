@@ -12,15 +12,18 @@ struct FeedView: View {
         TabView{
                   NavigationView{
                       VStack {
-                          HStack{
+                          HStack(spacing: 14){
                               Text("동네 선택")
+                                  .frame(maxWidth: .infinity)
+                              Spacer()
                               HStack{
                                   Image(systemName: "magnifyingglass")
                                   Image(systemName: "list.dash")
                                   Image(systemName: "bell")
                               }
+                              .frame(maxWidth: .infinity)
                           }
-
+                          
                           Spacer()
                           Text("Main Screen")
                           Text("Main Screen")
