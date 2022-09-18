@@ -20,7 +20,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Search Screen")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "magnifyingglass")
@@ -29,7 +29,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Camera")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "camera")
@@ -38,7 +38,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Vote")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "heart")
@@ -47,7 +47,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Profile")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "person")

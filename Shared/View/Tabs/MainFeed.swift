@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MainFeed: View {
     var body: some View {
-        VStack {
+        VStack() {
             HStack(spacing: 14){
                 Text("동네 선택")
                     .frame(maxWidth: .infinity)
@@ -35,7 +35,7 @@ struct MainFeed: View {
 
             }
         }
-//                      .navigationBarHidden(true)
+        .navigationBarHidden(true)
     }
 }
 
