@@ -9,12 +9,23 @@ import SwiftUI
 
 struct MainFeed: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct MainFeed_Previews: PreviewProvider {
-    static var previews: some View {
-        MainFeed()
+        VStack {
+            HStack(spacing: 14){
+                Text("동네 선택")
+                    .frame(maxWidth: .infinity)
+                Spacer()
+                HStack{
+                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "list.dash")
+                    Image(systemName: "bell")
+                }
+                .frame(maxWidth: .infinity)
+            }
+            
+            Spacer()
+            Text("Main Screen")
+            Text("Main Screen")
+        }
+//                      .navigationBarHidden(true)
     }
 }

@@ -27,9 +27,9 @@ struct RegisterView: View {
         
         CustomTextField(bindValue: $userId, label: "ID")
         
-        Custom_SecureField(bindValue: $password, label: "비밀번호")
+        CustomSecureField(bindValue: $password, label: "비밀번호")
         
-        Custom_SecureField(bindValue: $passwordConfirm, label: "비밀번호 확인")
+        CustomSecureField(bindValue: $passwordConfirm, label: "비밀번호 확인")
         
         
         CustomTextField(bindValue: $email, label: "이메일")
