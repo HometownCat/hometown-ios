@@ -12,6 +12,17 @@ struct FeedView: View {
         TabView{
                   NavigationView{
                       VStack {
+                          HStack{
+                              Text("동네 선택")
+                              HStack{
+                                  Image(systemName: "magnifyingglass")
+                                  Image(systemName: "list.dash")
+                                  Image(systemName: "bell")
+                              }
+                          }
+
+                          Spacer()
+                          Text("Main Screen")
                           Text("Main Screen")
                       }
 //                      .navigationBarHidden(true)

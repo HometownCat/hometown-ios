@@ -12,7 +12,8 @@ struct MainView: View {
     var body: some View {
         ZStack{
             Spacer().background(Color.white).edgesIgnoringSafeArea(.all)
-            LoginView()
+//            LoginView()
+            FeedView()
         }
     }
 }
