@@ -23,8 +23,17 @@ struct MainFeed: View {
             }
             
             Spacer()
-            Feed()
-            Feed()
+            ScrollView{
+                Feed()
+                Feed()
+                Feed()
+                Feed()
+                Feed()
+                Feed()
+                Feed()
+                Feed()
+
+            }
         }
 //                      .navigationBarHidden(true)
     }

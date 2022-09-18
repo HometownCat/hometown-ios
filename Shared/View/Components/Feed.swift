@@ -23,7 +23,7 @@ struct Feed: View {
                 Text("id")
                 Text("content")
             }
-        }
+        }.frame(maxWidth: .infinity)
         
     }
 }
