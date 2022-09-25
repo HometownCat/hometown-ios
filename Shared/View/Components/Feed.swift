@@ -19,8 +19,8 @@ struct Feed: View {
                 Image(systemName: "ellipsis")
             }
             HStack{
-                Image(systemName: "person.crop.circle")
-                Text("id")
+                Circle().frame(width: 30, height: 30)
+                Text("jwyun")
                 Text("content")
             }
         }.frame(maxWidth: .infinity)
