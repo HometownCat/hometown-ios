@@ -9,18 +9,19 @@ import SwiftUI
 
 struct MainFeed: View {
     var body: some View {
-        VStack() {
-            HStack(spacing: 14){
-                Text("동네 선택")
-                    .frame(maxWidth: .infinity)
+        VStack(alignment: .leading) {
+            HStack(){
+                HStack{
+                    Text("동네 선택")
+                }
                 Spacer()
                 HStack{
                     Image(systemName: "magnifyingglass")
                     Image(systemName: "list.dash")
                     Image(systemName: "bell")
                 }
-                .frame(maxWidth: .infinity)
-            }
+               
+            }.padding(.horizontal, 10)
             
             Spacer()
             ScrollView{

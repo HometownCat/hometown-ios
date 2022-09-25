@@ -10,7 +10,9 @@ import SwiftUI
 struct Feed: View {
     var body: some View {
         VStack(alignment: .leading){
-            Image("background1").resizable().aspectRatio(contentMode: .fit).padding(.horizontal, 10)
+            Image("background1")
+                .resizable().aspectRatio(contentMode: .fit)
+                .padding(.horizontal, 10)
             HStack(spacing: 14){
                 HStack{
                 Image(systemName: "heart")
@@ -20,10 +22,9 @@ struct Feed: View {
                 Spacer()
                 Image(systemName: "ellipsis")
             }.padding(.horizontal, 10)
-            HStack{
-                Circle().frame(width: 24, height: 24)
-                Text("jwyun")
-                Text("content")
+            VStack{
+                Commnet()
+//                Commnet()
             }.padding(.horizontal, 10)
         }.frame(maxWidth: .infinity)
     }
@@ -32,5 +33,6 @@ struct Feed: View {
 struct Feed_Previews: PreviewProvider {
     static var previews: some View {
         Feed()
+            .previewInterfaceOrientation(.portrait)
     }
 }
