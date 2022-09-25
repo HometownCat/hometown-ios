@@ -11,24 +11,21 @@ struct FeedView: View {
     var body: some View {
         TabView{
                   NavigationView{
-                      VStack {
-                          HStack(spacing: 14){
-                              Text("동네 선택")
-                                  .frame(maxWidth: .infinity)
-                              Spacer()
-                              HStack{
-                                  Image(systemName: "magnifyingglass")
-                                  Image(systemName: "list.dash")
-                                  Image(systemName: "bell")
-                              }
-                              .frame(maxWidth: .infinity)
-                          }
+                      ZStack(alignment: .bottomTrailing){
+                          MainFeed()
                           
-                          Spacer()
-                          Text("Main Screen")
-                          Text("Main Screen")
+                          Circle()
+                              .foregroundColor(Color.purple)
+                              .frame(width: 50, height: 50)
+                              .overlay(
+                                Image(systemName: "plus")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.white)
+                              )
+                              .padding(.trailing, 10)
+                              .shadow(radius: 6)
                       }
-//                      .navigationBarHidden(true)
+                     
                   }
                   .tabItem {
                       Image(systemName: "house.fill")
@@ -37,7 +34,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Search Screen")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "magnifyingglass")
@@ -46,7 +43,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Camera")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "camera")
@@ -55,7 +52,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Vote")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "heart")
@@ -64,7 +61,7 @@ struct FeedView: View {
                   NavigationView{
                       VStack {
                           Text("Profile")
-                      }
+                      }.navigationBarHidden(true)
                   }
                   .tabItem {
                       Image(systemName: "person")

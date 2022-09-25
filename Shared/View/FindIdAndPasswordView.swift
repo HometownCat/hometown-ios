@@ -25,11 +25,11 @@ struct FindIdAndPasswordView: View{
         
         Spacer()
         
-        Custom_TextField(bindValue: $userId, label: "ID")
+        CustomTextField(bindValue: $userId, label: "ID")
         
-        Custom_TextField(bindValue: $email, label: "이메일")
+        CustomTextField(bindValue: $email, label: "이메일")
         
-        Custom_TextField(bindValue: $telNum, label: "전화번호")
+        CustomTextField(bindValue: $telNum, label: "전화번호")
         
         Spacer()
         HStack{

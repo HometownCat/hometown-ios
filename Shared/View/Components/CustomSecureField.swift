@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Custom_SecureField : View{
+struct CustomSecureField : View{
     @Binding var bindValue : String
     var label : String
     

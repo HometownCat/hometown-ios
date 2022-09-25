@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Custom_TextField : View{
+struct CustomTextField : View{
     @Binding var bindValue : String
     var label : String
 

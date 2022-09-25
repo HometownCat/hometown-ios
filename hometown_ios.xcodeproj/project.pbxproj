@@ -23,8 +23,11 @@
 		5AC4EFB228AE207B003745C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC4EF8828AE207B003745C1 /* Assets.xcassets */; };
 		5AC4EFB328AE207B003745C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC4EF8828AE207B003745C1 /* Assets.xcassets */; };
 		5AD0163928BEE44C00549816 /* FindIdAndPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0163828BEE44C00549816 /* FindIdAndPasswordView.swift */; };
-		ACBC3B4928CC237C00DDD049 /* Custom_TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC3B4828CC237C00DDD049 /* Custom_TextField.swift */; };
-		ACBC3B4B28CC26DF00DDD049 /* Custom_SecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC3B4A28CC26DF00DDD049 /* Custom_SecureField.swift */; };
+		AC9CABD628D6B0E600E88E5A /* MainFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CABD528D6B0E600E88E5A /* MainFeed.swift */; };
+		AC9CABD928D6B24C00E88E5A /* Feed.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9CABD828D6B24C00E88E5A /* Feed.swift */; };
+		ACA421FB28DFF387005ED78D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA421FA28DFF387005ED78D /* Comment.swift */; };
+		ACBC3B4928CC237C00DDD049 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC3B4828CC237C00DDD049 /* CustomTextField.swift */; };
+		ACBC3B4B28CC26DF00DDD049 /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBC3B4A28CC26DF00DDD049 /* CustomSecureField.swift */; };
 		ACC5453F28C3127100B687DF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5453E28C3127100B687DF /* FeedView.swift */; };
 		ACC8F15128BB3DED0038E397 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15028BB3DED0038E397 /* Utils.swift */; };
 		ACC8F15328BB3DFA0038E397 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC8F15228BB3DFA0038E397 /* Constants.swift */; };
@@ -72,8 +75,11 @@
 		5AC4EFAA28AE207B003745C1 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		5AC4EFAC28AE207B003745C1 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		5AD0163828BEE44C00549816 /* FindIdAndPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIdAndPasswordView.swift; sourceTree = "<group>"; };
-		ACBC3B4828CC237C00DDD049 /* Custom_TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_TextField.swift; sourceTree = "<group>"; };
-		ACBC3B4A28CC26DF00DDD049 /* Custom_SecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom_SecureField.swift; sourceTree = "<group>"; };
+		AC9CABD528D6B0E600E88E5A /* MainFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFeed.swift; sourceTree = "<group>"; };
+		AC9CABD828D6B24C00E88E5A /* Feed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed.swift; sourceTree = "<group>"; };
+		ACA421FA28DFF387005ED78D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		ACBC3B4828CC237C00DDD049 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		ACBC3B4A28CC26DF00DDD049 /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		ACC5453E28C3127100B687DF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		ACC8F15028BB3DED0038E397 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ACC8F15228BB3DFA0038E397 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -189,9 +195,18 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		AC9CABD728D6B22400E88E5A /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				AC9CABD528D6B0E600E88E5A /* MainFeed.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 		ACC8F14A28BB3C8B0038E397 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AC9CABD728D6B22400E88E5A /* Tabs */,
 				ACC8F14D28BB3CA80038E397 /* Components */,
 				5A05265228B1E66000F03C4A /* LoginView.swift */,
 				ACC8F16228BB42AD0038E397 /* RegisterView.swift */,
@@ -213,8 +228,10 @@
 			isa = PBXGroup;
 			children = (
 				ACC8F15B28BB3FD00038E397 /* Component.swift */,
-				ACBC3B4828CC237C00DDD049 /* Custom_TextField.swift */,
-				ACBC3B4A28CC26DF00DDD049 /* Custom_SecureField.swift */,
+				ACBC3B4828CC237C00DDD049 /* CustomTextField.swift */,
+				ACBC3B4A28CC26DF00DDD049 /* CustomSecureField.swift */,
+				AC9CABD828D6B24C00E88E5A /* Feed.swift */,
+				ACA421FA28DFF387005ED78D /* Comment.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -414,7 +431,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACBC3B4B28CC26DF00DDD049 /* Custom_SecureField.swift in Sources */,
+				ACBC3B4B28CC26DF00DDD049 /* CustomSecureField.swift in Sources */,
 				ACC8F16328BB42AD0038E397 /* RegisterView.swift in Sources */,
 				5A08CD0B28CCB2E6009470BA /* BoardRequestAPI.swift in Sources */,
 				5AD0163928BEE44C00549816 /* FindIdAndPasswordView.swift in Sources */,
@@ -423,7 +440,9 @@
 				5A05265328B1E66000F03C4A /* LoginView.swift in Sources */,
 				5AC4EFAE28AE207B003745C1 /* hometown_iosApp.swift in Sources */,
 				ACC8F16128BB42470038E397 /* Repositor.swift in Sources */,
-				ACBC3B4928CC237C00DDD049 /* Custom_TextField.swift in Sources */,
+				ACA421FB28DFF387005ED78D /* Comment.swift in Sources */,
+				ACBC3B4928CC237C00DDD049 /* CustomTextField.swift in Sources */,
+				AC9CABD928D6B24C00E88E5A /* Feed.swift in Sources */,
 				ACC8F15328BB3DFA0038E397 /* Constants.swift in Sources */,
 				ACC8F15828BB3EA20038E397 /* ViewModel.swift in Sources */,
 				ACC8F15C28BB3FD00038E397 /* Component.swift in Sources */,
@@ -432,6 +451,7 @@
 				5A08CD0928CCAF86009470BA /* BoardComment.swift in Sources */,
 				ACC8F15128BB3DED0038E397 /* Utils.swift in Sources */,
 				5A08CD0728CCAE86009470BA /* BoardImage.swift in Sources */,
+				AC9CABD628D6B0E600E88E5A /* MainFeed.swift in Sources */,
 				ACC8F15F28BB423E0038E397 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,6 +621,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -632,6 +653,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;

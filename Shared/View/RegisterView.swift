@@ -25,16 +25,16 @@ struct RegisterView: View {
         
         Spacer()
         
-        Custom_TextField(bindValue: $userId, label: "ID")
+        CustomTextField(bindValue: $userId, label: "ID")
         
-        Custom_SecureField(bindValue: $password, label: "비밀번호")
+        CustomSecureField(bindValue: $password, label: "비밀번호")
         
-        Custom_SecureField(bindValue: $passwordConfirm, label: "비밀번호 확인")
+        CustomSecureField(bindValue: $passwordConfirm, label: "비밀번호 확인")
         
         
-        Custom_TextField(bindValue: $email, label: "이메일")
+        CustomTextField(bindValue: $email, label: "이메일")
         
-        Custom_TextField(bindValue: $telNum, label: "전화번호")
+        CustomTextField(bindValue: $telNum, label: "전화번호")
         
         Spacer()
         
