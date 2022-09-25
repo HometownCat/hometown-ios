@@ -9,22 +9,23 @@ import SwiftUI
 
 struct Feed: View {
     var body: some View {
-        VStack{
-            Image("background1").resizable().aspectRatio(contentMode: .fit)
+        VStack(alignment: .leading){
+            Image("background1").resizable().aspectRatio(contentMode: .fit).padding(.horizontal, 10)
             HStack(spacing: 14){
+                HStack{
                 Image(systemName: "heart")
 //                Image(systemName: "heart.fill")
                 Image(systemName: "message")
-//                Spacer()
+                }
+                Spacer()
                 Image(systemName: "ellipsis")
-            }
+            }.padding(.horizontal, 10)
             HStack{
-                Circle().frame(width: 30, height: 30)
+                Circle().frame(width: 24, height: 24)
                 Text("jwyun")
                 Text("content")
-            }
+            }.padding(.horizontal, 10)
         }.frame(maxWidth: .infinity)
-        
     }
 }
 
