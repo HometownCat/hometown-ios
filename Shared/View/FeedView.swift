@@ -11,7 +11,21 @@ struct FeedView: View {
     var body: some View {
         TabView{
                   NavigationView{
-                     MainFeed()
+                      ZStack(alignment: .bottomTrailing){
+                          MainFeed()
+                          
+                          Circle()
+                              .foregroundColor(Color.purple)
+                              .frame(width: 50, height: 50)
+                              .overlay(
+                                Image(systemName: "plus")
+                                    .font(.system(size: 30))
+                                    .foregroundColor(.white)
+                              )
+                              .padding(.trailing, 10)
+                              .shadow(radius: 6)
+                      }
+                     
                   }
                   .tabItem {
                       Image(systemName: "house.fill")
