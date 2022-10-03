@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Foundation
+import Alamofire
 
 struct ProfileTab: View {
 //    @State private var user = UserResponse(from: UserResponseResults)
@@ -63,36 +64,11 @@ struct ProfileTab: View {
         }
     }
     func loadData() async{
-        guard let boardUrl = URL(string: "localhost:3000/api/board/feed") else {
-            print("Invalid URL")
-            return
-        }
-        do {
-            let (data, _) = try await URLSession.shared.data(from: boardUrl)
-            
-            if let decodeBoards = try? JSONDecoder().decode(BoardResults.self, from: data){
-                boards = decodeBoards.boards
-                print(boards)
-            }
-            
-        } catch{
-            print("Invalid Data")
-        }
+        requestAF("http://localhost:3000/api/board/feed", "GET")
         
+//        request("http://localhost:3000/api/board/feed", "GET") { (success, data) in
+//          print(data)
+//        }
         
-//        guard let userUrl = URL(string: "http://localhost:3000/api/user/list") else {
-//            print("Invalid URL")
-//            return
-//        }
-//        do {
-//            let (data, _) = try await URLSession.shared.data(from: userUrl)
-//            if let decodeUsers = try? JSONDecoder().decode(UserResponseResults.self, from: data){
-//                users = decodeUsers.users
-//            }
-//            print(users)
-//
-//        } catch{
-//            print("Invalid Data")
-//        }
     }
 }

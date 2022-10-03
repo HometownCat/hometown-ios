@@ -1,0 +1,6 @@
+framework module Pods_hometown_ios__macOS_ {
+  umbrella header "Pods-hometown_ios (macOS)-umbrella.h"
+
+  export *
+  module * { export * }
+}

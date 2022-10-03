@@ -14,13 +14,10 @@ struct Board : Codable {
     let id: Int;
     let title: String;
     let content: String;
-//    let address: String;
-//    let phoneNumber: String;
-//    let profileImage: String;
     let viewCount: Int;
     let likeCount: Int;
     let commentCount: Int;
     let createdAt: Date;
     let updatedAt: Date;
-    let userId: Int;
+//    let userId: Int;
 }
