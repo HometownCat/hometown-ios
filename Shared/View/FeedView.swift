@@ -60,7 +60,8 @@ struct FeedView: View {
 
                   NavigationView{
                       VStack {
-                          Text("Profile")
+                          ProfileTab()
+//                          Text("Profile")
                       }.navigationBarHidden(true)
                   }
                   .tabItem {

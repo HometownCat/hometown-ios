@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct BoardResults : Decodable {
+struct BoardResults : Codable {
     let boards: [Board]
 }
-struct Board : Decodable, Hashable {
+struct Board : Codable {
     let id: Int;
     let title: String;
     let content: String;
@@ -19,5 +19,5 @@ struct Board : Decodable, Hashable {
     let commentCount: Int;
     let createdAt: Date;
     let updatedAt: Date;
-    let userId: Int;
+//    let userId: Int;
 }
